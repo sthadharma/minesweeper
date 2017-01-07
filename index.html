@@ -7,6 +7,7 @@
     <link rel="icon" href="" type="/image/x-icon" />
     <link rel="shortcut icon" href="./images/blast.gif"  type="/image/x-icon" />
     <style>
+    
     .button_up {
         text-align: center;
         vertical-align: middle;
@@ -451,6 +452,7 @@
             return false;
         }
         startMinesweeper(row, col, num);
+        return false;
     }
     //initialize the mine area
     function InitMineArea(row, col, mine_num, mine_index) {
@@ -1333,11 +1335,10 @@
 <body>
     <div id="divConfig" style: margin:auto; display:block;  >
         <form method="post" action="" name="frmConfig">
+        <p style= font-weight:bold; position: relative; left:30px;
+                     > Game Configuration</p>
             <table>
-                <tr>
-                    <td style= font-weight:bold;
-                     >Game Configuration</td>
-                </tr>
+                
                 <tr>
                     <td>Rows(Default:8):</td>
                     <td>
@@ -1358,6 +1359,7 @@
                 </tr>
                 <tr>
                     <td>
+                    	
                     	<button type ="button" style= background-color:#FFF; margin:auto; display:block; margin-top:22%; margin-bottom:0%; onclick="return CheckConfigAndStart(); ">Start</button>
                     </td>
                  
@@ -1375,7 +1377,7 @@
         </form>
     </div>
     <div id="playground">
-    <button type="button" style= background-color:#FFF; margin:auto; display:block; margin-top:22%; margin-bottom:0%; onclick="location.href='index.html';" >Restart</button>
+    <button type="button" style= background-color:#FFF; margin:auto; display:block; onclick="location.href='index.html';" >Restart</button>
     </div>
 </body>
 
